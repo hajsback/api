@@ -22,6 +22,9 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
-    compile "org.springframework.boot:spring-boot-starter:$springBootVer"
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVer"
+    compile "org.springframework.boot:spring-boot-starter-security:$springBootVer"
+    compileOnly "org.projectlombok:lombok:1.16.8"
 }

@@ -24,7 +24,14 @@ repositories {
 
 
 dependencies {
+    // Spring
     compile "org.springframework.boot:spring-boot-starter-web:$springBootVer"
     compile "org.springframework.boot:spring-boot-starter-security:$springBootVer"
+    compile "org.springframework.boot:spring-boot-starter-data-mongodb:$springBootVer"
+
+    // Lombok
     compileOnly "org.projectlombok:lombok:1.16.8"
+
+    // MapStruct
+    compileOnly "org.mapstruct:mapstruct-jdk8:1.0.0.Final"
 }

@@ -1,0 +1,8 @@
+group 'com.pawmot.hajsback'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}

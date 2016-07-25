@@ -1,0 +1,35 @@
+buildscript {
+    ext {
+        springBootVer = "1.3.6.RELEASE"
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVer"
+    }
+}
+
+group 'com.pawmot.hajsback'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    // Spring
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVer"
+    compile "org.springframework.boot:spring-boot-starter-security:$springBootVer"
+    compile "org.springframework.boot:spring-boot-starter-data-mongodb:$springBootVer"
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVer"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:1.16.10"
+}

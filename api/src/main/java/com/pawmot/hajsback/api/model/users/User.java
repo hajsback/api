@@ -1,4 +1,4 @@
-package com.pawmot.hajsback.api.model;
+package com.pawmot.hajsback.api.model.users;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,13 +9,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class User {
+public final class User {
     @Autowired
     private transient PasswordEncoder passwordEncoder;
 
-    User() {
-
-    }
+    User() { }
 
     @Id
     @Getter

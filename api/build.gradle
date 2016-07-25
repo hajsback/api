@@ -32,7 +32,4 @@ dependencies {
 
     // Lombok
     compileOnly "org.projectlombok:lombok:1.16.10"
-
-    // MapStruct
-    compileOnly "org.mapstruct:mapstruct-jdk8:1.0.0.Final"
 }

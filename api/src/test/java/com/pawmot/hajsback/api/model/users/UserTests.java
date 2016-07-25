@@ -1,4 +1,4 @@
-package com.pawmot.hajsback.api.model;
+package com.pawmot.hajsback.api.model.users;
 
 import com.pawmot.hajsback.api.config.SecurityConfig;
 import org.junit.Test;

@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -13,11 +14,17 @@ public final class User {
     @Autowired
     private transient PasswordEncoder passwordEncoder;
 
-    User() { }
+    User(String email) {
+        this.email = email;
+    }
 
     @Id
     @Getter
     private ObjectId id;
+
+    @Getter
+    @Indexed(unique = true)
+    private String email;
 
     @Getter
     @Setter

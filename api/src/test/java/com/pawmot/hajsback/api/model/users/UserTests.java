@@ -33,7 +33,7 @@ public class UserTests {
     }
 
     private User getWiredUser() {
-        User user = new User();
+        User user = new User("pm@pm.pl");
         ctx.getAutowireCapableBeanFactory().autowireBean(user);
         return user;
     }

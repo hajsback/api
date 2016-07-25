@@ -10,8 +10,8 @@ class UserFactoryImpl implements UserFactory, ApplicationContextAware {
     private ApplicationContext ctx;
 
     @Override
-    public User create() {
-        User user = new User();
+    public User create(String email) {
+        User user = new User(email);
         ctx.getAutowireCapableBeanFactory().autowireBean(user);
         return user;
     }

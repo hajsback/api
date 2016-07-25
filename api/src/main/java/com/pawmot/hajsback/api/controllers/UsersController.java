@@ -1,5 +1,6 @@
 package com.pawmot.hajsback.api.controllers;
 
+import com.pawmot.hajsback.api.dto.AuthTokensDto;
 import com.pawmot.hajsback.api.dto.RegisterUserDto;
 import com.pawmot.hajsback.api.exceptions.HttpStatusException;
 import com.pawmot.hajsback.api.exceptions.ValidationException;

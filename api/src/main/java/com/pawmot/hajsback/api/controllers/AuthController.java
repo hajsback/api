@@ -4,7 +4,10 @@ import com.pawmot.hajsback.api.dto.AuthTokensDto;
 import com.pawmot.hajsback.api.dto.LoginDto;
 import com.pawmot.hajsback.api.exceptions.HttpStatusException;
 import com.pawmot.hajsback.api.exceptions.ValidationException;
+import com.pawmot.hajsback.api.model.sessions.Session;
+import com.pawmot.hajsback.api.model.sessions.SessionFactory;
 import com.pawmot.hajsback.api.model.users.User;
+import com.pawmot.hajsback.api.repositories.sessions.SessionRepository;
 import com.pawmot.hajsback.api.repositories.users.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
@@ -23,12 +26,20 @@ import java.util.UUID;
 @RequestMapping("v1/auth/")
 public class AuthController {
     private final UserRepository userRepository;
+    private final SessionFactory sessionFactory;
+    private final SessionRepository sessionRepository;
     private final AutowireCapableBeanFactory beanFactory;
 
     @Autowired
-    public AuthController(UserRepository userRepository, ApplicationContext ctx) {
+    public AuthController(
+            UserRepository userRepository,
+            SessionFactory sessionFactory,
+            SessionRepository sessionRepository,
+            AutowireCapableBeanFactory beanFactory) {
         this.userRepository = userRepository;
-        this.beanFactory = ctx.getAutowireCapableBeanFactory();
+        this.sessionFactory = sessionFactory;
+        this.sessionRepository = sessionRepository;
+        this.beanFactory = beanFactory;
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
@@ -44,8 +55,13 @@ public class AuthController {
             throw new HttpStatusException(HttpStatus.UNAUTHORIZED);
         }
 
-        AuthTokensDto authTokensDto = new AuthTokensDto();
-        authTokensDto.setAccessToken(UUID.randomUUID());
-        return authTokensDto;
+        // TODO: check if the session already exists!
+
+        Session session = sessionFactory.create(dto.getEmail());
+        sessionRepository.save(session);
+
+        AuthTokensDto tokens = new AuthTokensDto();
+        tokens.setAccessToken(session.getAccessToken());
+        return tokens;
     }
 }

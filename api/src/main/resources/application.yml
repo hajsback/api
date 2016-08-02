@@ -2,3 +2,6 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/hajsback_auth
+
+session:
+  duration: 600

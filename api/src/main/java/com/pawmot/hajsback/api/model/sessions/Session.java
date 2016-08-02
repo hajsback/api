@@ -12,6 +12,12 @@ import java.util.UUID;
 
 @Document
 public class Session {
+    public Session(String userEmail, UUID accessToken, LocalDateTime expiresBy) {
+        this.userEmail = userEmail;
+        this.accessToken = accessToken;
+        setExpiresBy(expiresBy);
+    }
+
     @Id
     @Getter
     private ObjectId id;

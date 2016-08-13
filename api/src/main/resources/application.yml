@@ -5,3 +5,8 @@ spring:
 
 session:
   duration: 600
+
+activemq:
+  host: "localhost"
+  user: "hajsback"
+  pass: "secr3t"

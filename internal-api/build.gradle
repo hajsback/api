@@ -1,0 +1,13 @@
+group 'com.pawmot.hajsback'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok
+    compileOnly "org.projectlombok:lombok:1.16.10"
+}

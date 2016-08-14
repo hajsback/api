@@ -1,8 +1,11 @@
 package com.pawmot.hajsback.api.routes;
 
+import com.pawmot.hajsback.internal.api.transactions.AddDebtRequest;
 import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import static org.apache.camel.model.dataformat.JsonLibrary.Gson;
 
 @Component
 public class AddDebtRoute extends SpringRouteBuilder {
@@ -18,6 +21,7 @@ public class AddDebtRoute extends SpringRouteBuilder {
     public void configure() throws Exception {
         from(ADD_DEBT_ENDPOINT)
                 .routeId("add_debt")
+                .unmarshal().json(Gson, AddDebtRequest.class)
                 .to(jmsEndpointFactory.createRequestResponseEndpoint("new_transaction"));
     }
 }

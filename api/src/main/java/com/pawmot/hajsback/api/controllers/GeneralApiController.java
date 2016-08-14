@@ -49,12 +49,7 @@ public class GeneralApiController {
 
     @RequestMapping(path = "v1/**", method = {RequestMethod.GET, RequestMethod.POST })
     public Object handleApiRequest(HttpServletRequest request) throws Exception {
-        String path = (String) request.getAttribute(
-                HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE);
-        String bestMatchPattern = (String ) request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE);
-
-        AntPathMatcher apm = new AntPathMatcher();
-        String finalPath = apm.extractPathWithinPattern(bestMatchPattern, path);
+        String route = (String) request.getAttribute(HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE);
 
         String authHeader = request.getHeader("Authorization");
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
@@ -91,7 +86,7 @@ public class GeneralApiController {
 
         RoutingEntryPoint routingEntryPoint = createRoutingEntryPoint();
 
-        return routingEntryPoint.routeRequest(finalPath, httpMethod, jwt, content);
+        return routingEntryPoint.routeRequest(route, httpMethod, jwt, content);
     }
 
     private RoutingEntryPoint createRoutingEntryPoint() throws Exception {

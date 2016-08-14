@@ -3,7 +3,9 @@ package com.pawmot.hajsback.api.controllers;
 import com.auth0.jwt.JWTSigner;
 import com.pawmot.hajsback.api.exceptions.HttpStatusException;
 import com.pawmot.hajsback.api.model.sessions.Session;
+import com.pawmot.hajsback.api.model.users.User;
 import com.pawmot.hajsback.api.repositories.sessions.SessionRepository;
+import com.pawmot.hajsback.api.repositories.users.UserRepository;
 import com.pawmot.hajsback.api.routes.EntryRouteBuilder;
 import com.pawmot.hajsback.api.routes.RoutingEntryPoint;
 import org.apache.camel.CamelContext;
@@ -30,6 +32,7 @@ import java.util.UUID;
 public class GeneralApiController {
     private final CamelContext camelContext;
     private final SessionRepository sessionRepository;
+    private final UserRepository userRepository;
 
     @Value("${session.duration}")
     private int sessionDurationSeconds;
@@ -38,9 +41,10 @@ public class GeneralApiController {
     private String secret;
 
     @Autowired
-    public GeneralApiController(CamelContext camelContext, SessionRepository sessionRepository) {
+    public GeneralApiController(CamelContext camelContext, SessionRepository sessionRepository, UserRepository userRepository) {
         this.camelContext = camelContext;
         this.sessionRepository = sessionRepository;
+        this.userRepository = userRepository;
     }
 
     @RequestMapping(path = "v1/**", method = {RequestMethod.GET, RequestMethod.POST })
@@ -58,22 +62,27 @@ public class GeneralApiController {
         }
 
         UUID accessToken = UUID.fromString(authHeader.substring(7));
-        // TODO: Transaction
+        // TODO: Transaction?
         Session session = sessionRepository.findByAccessToken(accessToken);
 
         if (session == null || session.getExpiresBy().isBefore(LocalDateTime.now())) {
             // TODO: remove the session?
             throw new HttpStatusException(HttpStatus.UNAUTHORIZED); // TODO: verify this HTTP status
-        } else {
-            session.setExpiresBy(LocalDateTime.now().plusSeconds(sessionDurationSeconds));
-            sessionRepository.save(session);
         }
 
+        session.setExpiresBy(LocalDateTime.now().plusSeconds(sessionDurationSeconds));
+        sessionRepository.save(session);
+
+        User user = userRepository.findByEmail(session.getUserEmail());
+
         final String issuer = "ApiGateway";
+        final String audience = "Hajsback";
 
         final JWTSigner signer = new JWTSigner(secret);
         final Map<String, Object> claims = new HashMap<>();
         claims.put("iss", issuer);
+        claims.put("aud", audience);
+        claims.put("com.pawmot.hajsback.user.email", user.getEmail());
 
         final String jwt = signer.sign(claims);
 

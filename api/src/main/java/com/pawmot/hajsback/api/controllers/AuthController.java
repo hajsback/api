@@ -55,9 +55,12 @@ public class AuthController {
             throw new HttpStatusException(HttpStatus.UNAUTHORIZED);
         }
 
-        // TODO: check if the session already exists!
+        Session session = sessionRepository.findByUserEmail(dto.getEmail());
+        if (session != null) {
+            sessionRepository.delete(session);
+        }
 
-        Session session = sessionFactory.create(dto.getEmail());
+        session = sessionFactory.create(dto.getEmail());
         sessionRepository.save(session);
 
         AuthTokensDto tokens = new AuthTokensDto();

@@ -5,5 +5,9 @@ import org.apache.camel.Header;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 public interface RoutingEntryPoint {
-    Object routeRequest(@Header("HttpRoute")String httpRoute, @Header("HttpMethod")RequestMethod method, @Body String content);
+    Object routeRequest(
+            @Header("HttpRoute")String httpRoute,
+            @Header("HttpMethod")RequestMethod method,
+            @Header("JWT")String jwt,
+            @Body String content);
 }

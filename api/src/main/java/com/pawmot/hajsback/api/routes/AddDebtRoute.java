@@ -5,6 +5,7 @@ import org.apache.camel.spring.SpringRouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import static com.pawmot.hajsback.internal.api.transactions.QueueNames.ADD_DEBT_QUEUE;
 import static org.apache.camel.model.dataformat.JsonLibrary.Gson;
 
 @Component
@@ -22,6 +23,6 @@ public class AddDebtRoute extends SpringRouteBuilder {
         from(ADD_DEBT_ENDPOINT)
                 .routeId("add_debt")
                 .unmarshal().json(Gson, AddDebtRequest.class)
-                .to(jmsEndpointFactory.createRequestResponseEndpoint("new_transaction"));
+                .to(jmsEndpointFactory.createRequestResponseEndpoint(ADD_DEBT_QUEUE));
     }
 }

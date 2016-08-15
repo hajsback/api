@@ -70,8 +70,8 @@ public class GeneralApiController {
 
         User user = userRepository.findByEmail(session.getUserEmail());
 
-        final String issuer = "ApiGateway";
-        final String audience = "Hajsback";
+        final String issuer = "com.pawmot.hajsback.api";
+        final String audience = "com.pawmot.hajsback";
 
         final JWTSigner signer = new JWTSigner(secret);
         final Map<String, Object> claims = new HashMap<>();

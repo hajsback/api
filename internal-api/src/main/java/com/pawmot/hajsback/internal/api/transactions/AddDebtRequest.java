@@ -10,7 +10,7 @@ public class AddDebtRequest implements Serializable {
 
     private String debtorEmail;
 
-    private String debteeEmail;
+    private String creditorEmail;
 
     private int amount;
 }

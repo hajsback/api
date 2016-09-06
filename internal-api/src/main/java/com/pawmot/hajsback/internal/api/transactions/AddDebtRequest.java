@@ -1,13 +1,11 @@
 package com.pawmot.hajsback.internal.api.transactions;
 
+import lombok.Builder;
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
-public class AddDebtRequest implements Serializable {
-    private static final long serialVersionUID = -547809747622379675L;
-
+@Builder
+public class AddDebtRequest {
     private String debtorEmail;
 
     private String creditorEmail;

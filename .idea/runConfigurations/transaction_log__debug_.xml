@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="transaction-log (debug)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <pattern>
+        <option name="PATTERN" value="com.pawmot.hajsback.transactionLog.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.pawmot.hajsback.transactionLog.App" />
+    <option name="VM_PARAMETERS" value="-Xdebug  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5006" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="transaction-log_main" />
+    <envs />
+    <method />
+  </configuration>
+</component>

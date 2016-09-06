@@ -13,6 +13,7 @@ services:
     environment:
       ACTIVEMQ_OWNER_LOGIN: hajsback
       ACTIVEMQ_OWNER_PASSWORD: secr3t
+      ACTIVEMQ_LOGLEVEL: DEBUG
     expose:
       - "61616"
       - "8161"

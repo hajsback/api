@@ -1,6 +1,7 @@
 package com.pawmot.hajsback.api.exceptionHandling;
 
 import com.pawmot.hajsback.api.exceptions.HttpStatusException;
+import org.apache.camel.ExchangeTimedOutException;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,4 +19,9 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Void> httpStatusException(HttpStatusException exception) {
         return ResponseEntity.status(exception.getHttpStatus()).build();
     }
+
+    // TODO: check why this does not work!
+    @ResponseStatus(HttpStatus.GATEWAY_TIMEOUT)
+    @ExceptionHandler({ExchangeTimedOutException.class})
+    public void exchangeTimeout() {}
 }

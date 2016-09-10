@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
+// TODO: move this logic to a separate microservice
 @RestController
 @RequestMapping(path = "/v1/users")
 public class UsersController {

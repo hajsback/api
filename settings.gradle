@@ -1,3 +1,6 @@
 rootProject.name = 'root'
 include 'api'
+include 'transaction-log'
+include 'internal-api'
+include 'common'
 

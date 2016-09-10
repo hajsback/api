@@ -1,0 +1,19 @@
+group 'com.pawmot.hajsback'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Lombok
+    compileOnly "org.projectlombok:lombok:1.16.10"
+
+    // Spring
+    compile "org.springframework:spring-context:4.2.7.RELEASE"
+
+    // Camel
+    compile "org.apache.camel:camel-jms:2.17.2"
+}

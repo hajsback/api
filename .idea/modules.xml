@@ -5,7 +5,16 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api.iml" group="api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api_main.iml" group="api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api_test.iml" group="api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_main.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_test.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api.iml" group="internal-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api_main.iml" group="internal-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api_test.iml" group="internal-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log.iml" group="transaction-log" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_main.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_main.iml" group="transaction-log" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_test.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_test.iml" group="transaction-log" />
     </modules>
   </component>
 </project>

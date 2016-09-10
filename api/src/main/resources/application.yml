@@ -4,4 +4,12 @@ spring:
       uri: mongodb://localhost:27017/hajsback_auth
 
 session:
-  duration: 600
+  duration: 3600
+
+activemq:
+  host: "localhost"
+  user: "hajsback"
+  pass: "secr3t"
+
+security:
+  secret: "secret"

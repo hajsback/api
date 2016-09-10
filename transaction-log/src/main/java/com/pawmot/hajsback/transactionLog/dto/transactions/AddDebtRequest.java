@@ -1,4 +1,4 @@
-package com.pawmot.hajsback.internal.api.transactions;
+package com.pawmot.hajsback.transactionLog.dto.transactions;
 
 import lombok.Builder;
 import lombok.Data;

@@ -24,11 +24,17 @@ public class EntryRouteBuilder extends SpringRouteBuilder {
 
     @Override
     public void configure() throws Exception {
+        final String httpRouteHeader = "HttpRoute";
+        final String httpMethodHeader = "HttpMethod";
         from(ENTRY_ROUTE_ENDPOINT).routeId("entry")
                 .process(logProcessor)
                 .choice()
-                    .when(PredicateBuilder.and(header("HttpRoute").isEqualToIgnoreCase("/v1/add_debt"), header("HttpMethod").isEqualTo(RequestMethod.POST)))
+                    .when(PredicateBuilder.and(header(httpRouteHeader).isEqualToIgnoreCase("/v1/add_debt"),
+                            header(httpMethodHeader).isEqualTo(RequestMethod.POST)))
                             .to(AddDebtRoute.ADD_DEBT_ENDPOINT)
+                    .when(PredicateBuilder.and(header(httpRouteHeader).isEqualToIgnoreCase("/v1/repay_debt"),
+                            header(httpMethodHeader).isEqualTo(RequestMethod.POST)))
+                            .to(RepayDebtRoute.REPAY_DEBT_ENDPOINT)
                     .otherwise()
                             .to(NotFoundRoute.NOT_FOUND_ENDPOINT)
                 .end();

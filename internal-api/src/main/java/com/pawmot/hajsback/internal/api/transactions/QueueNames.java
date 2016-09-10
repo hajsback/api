@@ -6,4 +6,6 @@ public class QueueNames {
     }
 
     public static final String ADD_DEBT_QUEUE = "add_debt";
+
+    public static final String REPAY_DEBT_QUEUE = "repay_debt";
 }

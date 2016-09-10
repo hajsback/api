@@ -47,4 +47,5 @@ dependencies {
 
     // internal
     compile project(":internal-api")
+    compile project(":common")
 }

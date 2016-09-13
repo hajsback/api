@@ -23,6 +23,8 @@
       <module name="api_test" target="1.8" />
       <module name="common_main" target="1.8" />
       <module name="common_test" target="1.8" />
+      <module name="debt-graph_main" target="1.8" />
+      <module name="debt-graph_test" target="1.8" />
       <module name="internal-api_main" target="1.8" />
       <module name="internal-api_test" target="1.8" />
       <module name="transaction-log_main" target="1.8" />

@@ -2,5 +2,5 @@ group 'com.pawmot.hajsback'
 version '0.1-SNAPSHOT'
 
 task wrapper(type: Wrapper) {
-    gradleVersion = "2.14"
+    gradleVersion = "3.0"
 }

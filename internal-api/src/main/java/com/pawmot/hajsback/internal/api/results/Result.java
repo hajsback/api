@@ -5,6 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class Result {
+public class Result<T> {
     private ResultKind resultKind;
+
+    private T data;
 }

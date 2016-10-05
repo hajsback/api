@@ -3,4 +3,5 @@ include 'api'
 include 'transaction-log'
 include 'internal-api'
 include 'common'
+include 'debt-graph'
 

@@ -35,6 +35,9 @@ public class EntryRouteBuilder extends SpringRouteBuilder {
                     .when(PredicateBuilder.and(header(httpRouteHeader).isEqualToIgnoreCase("/v1/repay_debt"),
                             header(httpMethodHeader).isEqualTo(RequestMethod.POST)))
                             .to(RepayDebtRoute.REPAY_DEBT_ENDPOINT)
+                    .when(PredicateBuilder.and(header(httpRouteHeader).startsWith("/v1/credits_and_debts/"),
+                            header(httpMethodHeader).isEqualTo(RequestMethod.GET)))
+                            .to(CreditsAndDebtsRoute.CREDITS_AND_DEBTS_ENDPOINT)
                     .otherwise()
                             .to(NotFoundRoute.NOT_FOUND_ENDPOINT)
                 .end();

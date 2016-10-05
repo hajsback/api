@@ -6,4 +6,6 @@ public interface JmsEndpointFactory {
     String createRequestResponseEndpoint(String queueName, JmsMessageType messageType);
 
     String createListeningEndpoint(String queueName, JmsMessageType messageType);
+
+    String createMessageEndpoint(String queueName, JmsMessageType messageType);
 }

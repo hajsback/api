@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common.iml" group="common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_main.iml" group="common" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_test.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/debt-graph/debt-graph.iml" filepath="$PROJECT_DIR$/.idea/modules/debt-graph/debt-graph.iml" group="debt-graph" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/debt-graph/debt-graph_main.iml" filepath="$PROJECT_DIR$/.idea/modules/debt-graph/debt-graph_main.iml" group="debt-graph" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/debt-graph/debt-graph_test.iml" filepath="$PROJECT_DIR$/.idea/modules/debt-graph/debt-graph_test.iml" group="debt-graph" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api.iml" group="internal-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api_main.iml" group="internal-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api_test.iml" group="internal-api" />

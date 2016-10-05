@@ -14,6 +14,9 @@
     <orderEntry type="module" module-name="common_main" />
     <orderEntry type="library" name="Gradle: org.scala-lang:scala-library:2.11.8" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-actor_2.11:2.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-slf4j_2.11:2.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-http-experimental_2.11:2.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-http-spray-json-experimental_2.11:2.4.10" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe.play:play-json_2.11:2.5.4" level="project" />
     <orderEntry type="library" name="Gradle: com.codemettle.reactivemq:reactivemq_2.11:0.5.5" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-client:5.13.3" level="project" />
@@ -23,6 +26,8 @@
     <orderEntry type="library" name="Gradle: org.apache.camel:camel-jms:2.17.2" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe:config:1.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-http-core_2.11:2.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: io.spray:spray-json_2.11:1.3.2" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe.play:play-iteratees_2.11:2.5.4" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe.play:play-functional_2.11:2.5.4" level="project" />
     <orderEntry type="library" name="Gradle: com.typesafe.play:play-datacommons_2.11:2.5.4" level="project" />
@@ -47,10 +52,16 @@
     <orderEntry type="library" name="Gradle: org.apache.camel:camel-spring:2.17.2" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-jms:4.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-tx:4.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-stream_2.11:2.4.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe.akka:akka-parsing_2.11:2.4.10" level="project" />
     <orderEntry type="library" name="Gradle: org.scala-stm:scala-stm_2.11:0.7" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.xml.bind:jaxb-core:2.2.11" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.xml.bind:jaxb-impl:2.2.11" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-messaging:4.2.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe:ssl-config-akka_2.11:0.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.reactivestreams:reactive-streams:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe:ssl-config-core_2.11:0.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
     <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
   </component>

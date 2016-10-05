@@ -35,6 +35,7 @@ dependencies {
     compile "org.apache.camel:camel-spring-boot-starter:$camelVer"
     compile "org.apache.camel:camel-jms:$camelVer"
     compile "org.apache.camel:camel-gson:$camelVer"
+    compile "org.apache.camel:camel-http:$camelVer"
 
     // ActiveMQ
     compile "org.apache.activemq:activemq-core:5.7.0"

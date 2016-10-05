@@ -14,7 +14,6 @@ import org.apache.camel.component.bean.ProxyHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.util.AntPathMatcher;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,7 +46,7 @@ public class GeneralApiController {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping(path = "v1/**", method = {RequestMethod.GET, RequestMethod.POST })
+    @RequestMapping(path = "v1/**", method = {RequestMethod.GET, RequestMethod.POST }, produces = "application/json")
     public Object handleApiRequest(HttpServletRequest request) throws Exception {
         String route = (String) request.getAttribute(HandlerMapping.PATH_WITHIN_HANDLER_MAPPING_ATTRIBUTE);
 

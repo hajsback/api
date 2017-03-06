@@ -15,9 +15,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api_main.iml" group="internal-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/internal-api/internal-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/internal-api/internal-api_test.iml" group="internal-api" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log.iml" group="transaction-log" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_main.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_main.iml" group="transaction-log" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_test.iml" filepath="$PROJECT_DIR$/.idea/modules/transaction-log/transaction-log_test.iml" group="transaction-log" />
     </modules>
   </component>
 </project>

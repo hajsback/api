@@ -1,11 +1,16 @@
 version: '3'
 
+volumes:
+  mongo-vol:
+
 services:
   mongodb:
     container_name: mongodb
     image: mongo
     ports:
-      - '27018:27017'
+      - '27017:27017'
+    volumes:
+      - "mongo-vol:/data/db"
 
   mq:
     container_name: mq

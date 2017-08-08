@@ -14,11 +14,13 @@ import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("v1/auth/")
 public class AuthController {
@@ -49,7 +51,7 @@ public class AuthController {
         beanFactory.autowireBean(user);
 
         if (user == null || !user.checkPassword(dto.getPassword())) {
-            throw new HttpStatusException(HttpStatus.UNAUTHORIZED);
+            throw new HttpStatusException(HttpStatus.BAD_REQUEST);
         }
 
         Session session = sessionRepository.findByUserEmail(dto.getEmail());
